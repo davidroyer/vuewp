@@ -3,8 +3,8 @@ require_once( get_stylesheet_directory() . '/wordpress/initial_data.php' );
 require_once( get_stylesheet_directory(). '/assets_helper.php');
 
 function load_vue_scripts() {
-	wp_register_script( 'vendors-js', vuewp_mix('chunk-vendors.js'), array(), '1.0.0', true );
-	wp_register_script( 'app-js', vuewp_mix('app.js'), array('vendors-js'), '1.0.0', true );
+	wp_register_script( 'vendors-js', vuewp_mix('chunk-vendors.js'), null, null, true );
+	wp_register_script( 'app-js', vuewp_mix('app.js'), array('vendors-js'), null, true );
 
 	register_endpoints();
 	register_initial_data();

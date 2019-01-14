@@ -4,9 +4,8 @@ const path = require("webpack-assets-manifest");
 // var assetsPluginInstance = new AssetsPlugin({ useCompilerPath: true });
 module.exports = {
   // publicPath: "http://localhost:8080/",
-  outputDir: "./dist/",
-
-  filenameHashing: true,
+  // outputDir: "./dist/",
+  // filenameHashing: true,
   // outputDir: "http://localhost:8080/",
   // assetsDir: "http://localhost:8080/",
   publicPath:
@@ -22,11 +21,9 @@ module.exports = {
         writeToDisk: true,
         output: "vuewp-manifest.json"
       })
-      // assetsPluginInstance
     ]
   },
   devServer: {
-    // port: "9876",
     publicPath: "http://localhost:8080/",
     headers: { "Access-Control-Allow-Origin": "*" },
     disableHostCheck: true
