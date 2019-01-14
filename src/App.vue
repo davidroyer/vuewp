@@ -4,7 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view class="view" :key="$route.fullPath"></router-view>
+    </transition>
   </div>
 </template>
 
