@@ -7,7 +7,11 @@
 // }
 
 module.exports = {
-  filenameHashing: false,
+  publicPath:
+    process.env.NODE_ENV === "production"
+      ? "/wp-content/themes/vue-cli-3-wp-theme"
+      : "http://localhost:9876/",
+  // filenameHashing: false,
   indexPath:
     process.env.NODE_ENV === "production" ? "index.blade.php" : "index.html",
   // path:
