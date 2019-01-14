@@ -7,15 +7,14 @@ module.exports = {
   outputDir: "./dist/",
 
   filenameHashing: true,
-  // outputDir: "http://localhost:9090/",
+  // outputDir: "http://localhost:8080/",
   // assetsDir: "http://localhost:8080/",
   publicPath:
     process.env.NODE_ENV === "production"
       ? "/wp-content/themes/vue-cli-3-wp-theme/dist/"
       : "http://localhost:8080/",
   indexPath:
-    process.env.NODE_ENV === "production" ? "../TEST.blade.php" : "index.html",
-  // path:
+    process.env.NODE_ENV === "production" ? "index.html" : "index.html",
 
   configureWebpack: {
     plugins: [
@@ -33,7 +32,7 @@ module.exports = {
     disableHostCheck: true
   },
   chainWebpack: config => {
-    config.plugins.delete("html");
+    // config.plugins.delete("html");
     config.plugins.delete("preload");
     config.plugins.delete("prefetch");
   }
@@ -41,11 +40,3 @@ module.exports = {
   //   config.optimization.splitChunks(false);
   // }
 };
-
-// var publicPath;
-
-// if (process.env.NODE_ENV === "production") {
-//   publicPath = "/wp-content/themes/vue-cli-3-wp-theme";
-// } else {
-//   publicPath = "http://localhost:9876/";
-// }
