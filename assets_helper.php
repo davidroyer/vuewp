@@ -12,19 +12,17 @@
     $prod_asset_base_url = get_template_directory_uri() . '/dist/';
     $dev_asset_base_url = 'http://localhost:8080/';
 
-    if ( vuewp_isHMR() ) {
-        echo 'IS HMR';
-        if ($asset) {
-          return $dev_asset_base_url . $asset;
-        }
+    if ( vuewp_isHMR() && $asset ) {
+      return $dev_asset_base_url . $asset;
     } else {
+
       /**
        * Generate ID for cacheing
        */
         $dot_before_hash_position = strpos($asset, '.');
         $extension_position = strrpos($asset, '.');
         $id = substr($asset, $dot_before_hash_position + 1, 8);
-        
+
         return $prod_asset_base_url . $asset . '?id=' . $id;
     }
   }
