@@ -36,6 +36,7 @@
     "sass-loader": "^7.0.1",
     "vue-cli-plugin-pwa": "^1.0.0-alpha.1",
     "vue-template-compiler": "^2.5.21",
+    "webpack-assets-manifest": "^3.1.1",
     "webpack-manifest-plugin": "^2.0.4"
   }
 }
