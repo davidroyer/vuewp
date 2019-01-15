@@ -1,13 +1,23 @@
 const WebpackAssetsManifest = require("webpack-assets-manifest");
-const path = require("webpack-assets-manifest");
-// var AssetsPlugin = require("assets-webpack-plugin");
-// var assetsPluginInstance = new AssetsPlugin({ useCompilerPath: true });
+
 module.exports = {
-  // publicPath: "http://localhost:8080/",
-  // outputDir: "./dist/",
-  // filenameHashing: true,
-  // outputDir: "http://localhost:8080/",
-  // assetsDir: "http://localhost:8080/",
+  pages: {
+    index: {
+      entry: "src/frontend/main.js",
+      template: "public/index.html",
+      filename: "index.html",
+      title: "FrontEnd Entry",
+      chunks: ["chunk-vendors", "chunk-common", "index"]
+    },
+    admin: {
+      entry: "src/admin/main.js",
+      template: "public/index.html",
+      filename: "admin/index.html",
+      title: "Admin Page",
+      chunks: ["chunk-vendors", "chunk-common", "admin"]
+    }
+  },
+
   publicPath:
     process.env.NODE_ENV === "production"
       ? "/wp-content/themes/vue-cli-3-wp-theme/dist/"

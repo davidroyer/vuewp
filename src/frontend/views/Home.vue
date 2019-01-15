@@ -1,5 +1,5 @@
 <template>
-  <div class="home">HOME TEST 1 2</div>
+  <div class="home">HOME TEST 1 a</div>
 </template>
 
 <script>

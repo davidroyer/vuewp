@@ -6,7 +6,7 @@ function register_endpoints() {
         global $post;
         
         wp_localize_script(
-          'themint/app.js', // vue script handle defined in wp_register_script.
+          'frontend-js', // vue script handle defined in wp_register_script.
           '__HOMEURL__', // javascript object that will made availabe to Vue.
           get_stylesheet_directory_uri()
         );
@@ -14,7 +14,7 @@ function register_endpoints() {
         wp_enqueue_script( 'register_home_endpoint' );
 
         wp_localize_script(
-          'themint/app.js', // vue script handle defined in wp_register_script.
+          'frontend-js', // vue script handle defined in wp_register_script.
           '__APIURL__', // javascript object that will made availabe to Vue.
           untrailingslashit( esc_url_raw( rest_url() ) )
         );
@@ -27,7 +27,7 @@ function register_initial_data() {
         global $post;
         
         wp_localize_script(
-          'themint/app.js', // vue script handle defined in wp_register_script.
+          'frontend-js', // vue script handle defined in wp_register_script.
           '__INITIAL_DATA__', // javascript object that will made availabe to Vue.
           array(
             'is_alive' => "It's Alive"
