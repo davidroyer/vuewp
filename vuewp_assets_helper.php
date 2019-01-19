@@ -4,7 +4,7 @@
     return $isHMR;
   }
 
-  function vuewp_mix($file) {
+  function vuewp($file) {
     $mix_manifest_location = get_stylesheet_directory() . "/dist/vuewp-manifest.json";
     $mix_manifest = json_decode(file_get_contents($mix_manifest_location), true);
     $asset = $mix_manifest[$file];

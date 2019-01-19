@@ -4,16 +4,10 @@ module.exports = {
   pages: {
     index: {
       entry: "src/frontend/main.js",
-      template: "public/index.html",
-      filename: "index.html",
-      title: "FrontEnd Entry",
       chunks: ["chunk-vendors", "chunk-common", "index"]
     },
     admin: {
       entry: "src/admin/main.js",
-      template: "public/index.html",
-      filename: "admin/index.html",
-      title: "Admin Page",
       chunks: ["chunk-vendors", "chunk-common", "admin"]
     }
   },
@@ -34,11 +28,14 @@ module.exports = {
     ]
   },
   devServer: {
-    publicPath: "http://localhost:8080/",
     headers: { "Access-Control-Allow-Origin": "*" },
     disableHostCheck: true
   },
+
   chainWebpack: config => {
+    /**
+     * Can't get delete to work for HTML
+     */
     // config.plugins.delete("html");
     config.plugins.delete("preload");
     config.plugins.delete("prefetch");

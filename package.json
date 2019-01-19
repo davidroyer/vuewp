@@ -8,6 +8,7 @@
     "build": "vue-cli-service build",
     "predev": "touch .hot",
     "prebuild": "rm -f .hot ",
+    "postbuild": "rm -rf ./dist/*.html",
     "lint": "vue-cli-service lint",
     "capacitor-copy": "vue-cli-service capacitor-copy",
     "capacitor-init": "vue-cli-service capacitor-init",
