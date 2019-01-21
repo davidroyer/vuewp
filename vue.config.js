@@ -14,7 +14,7 @@ module.exports = {
 
   publicPath:
     process.env.NODE_ENV === "production"
-      ? "/wp-content/themes/vue-cli-3-wp-theme/dist/"
+      ? "/wp-content/themes/vuewp/dist/"
       : "http://localhost:8080/",
   indexPath:
     process.env.NODE_ENV === "production" ? "index.html" : "index.html",
