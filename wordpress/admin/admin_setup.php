@@ -24,7 +24,7 @@ function my_admin_menu() {
 function vuewp_admin_page(){
 	?>
 	<div class="wrap">
-		<h2>Welcome To My Plugin</h2>
+		<!-- <h2>Welcome To My Plugin</h2> -->
         <div id="app"></div>
 	</div>
 	<?php
